@@ -117,23 +117,13 @@ dependency8.type=UsesDependency
 dependency9.from=Level3
 dependency9.to=Coin
 dependency9.type=UsesDependency
-<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
-height=1414
-package.numDependencies=34
-package.numTargets=17
-=======
-editor.fx.0.height=746
-editor.fx.0.width=818
-editor.fx.0.x=396
-editor.fx.0.y=48
-height=881
+height=830
 package.numDependencies=35
 package.numTargets=19
->>>>>>> a788cd6a060533bf361d9a8615cb6f1f237d5cf3
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -282,7 +272,7 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1495
+width=1550
 world.lastInstantiated=Level3
 xPosition=0
-yPosition=319
+yPosition=0
