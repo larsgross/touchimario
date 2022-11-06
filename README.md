@@ -90,6 +90,30 @@ What new should be created
 <div align="center">
 
   <h3>
+  Branches
+  </h3>
+
+</div>
+
+<h4>
+main
+</h4>
+Nothing is changed on the main branch and only updates that are complete are released.
+
+<h4>
+development
+</h4>
+On the development branch, adjustments are made, things are tried out and new functions are developed.
+
+<h4>
+development to main
+</h4>
+As soon as everything works on the development branch, the files are loaded onto the main branch.
+<hr>
+
+<div align="center">
+
+  <h3>
   License 
   </h3>
 
