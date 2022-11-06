@@ -90,7 +90,20 @@ What new should be created
 <div align="center">
 
   <h3>
-  Implementation of the project  
+  License 
   </h3>
 
 </div>
+We are using the GPL-3.0 license.
+
+<hr>
+
+<div align="center">
+
+  <h3>
+  Developers 
+  </h3>
+
+</div>
+- Lars Gross | lars.gross@edu.tbz.ch <br>
+- Vithun Kandeepan | vithun.kandeepan@edu.tbz.ch
