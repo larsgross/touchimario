@@ -107,8 +107,8 @@ public class Level3 extends World
     }
     
     private void spawnEnemy(){
-        Kroopa kroopa = new Kroopa(); //Neues Objekt erzeugen
-        addObject(kroopa, 965, 292); //Objekt platzieren
+        RedKroopa redkroopa = new RedKroopa(); //Neues Objekt erzeugen
+        addObject(redkroopa, 965, 292); //Objekt platzieren
         Kroopa kroopa2 = new Kroopa(); //Neues Objekt erzeugen
         addObject(kroopa2, 268, 669); //Objekt platzieren
         
