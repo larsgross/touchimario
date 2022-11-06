@@ -38,7 +38,7 @@ public class Mario extends Actor
         if (Greenfoot.isKeyDown("W")){ //Abfrage wenn die Taste "W" gedrückt wird
             if(this.onGround() == true || this.getY() > 622){ //Abfrage wenn er auf den Boden ist oder bei der Koordinate Y = 662
                 this.jumpAction(); //Abruf der Methode
-            
+                Greenfoot.playSound("Jump.wav");            
             }
                 
         
