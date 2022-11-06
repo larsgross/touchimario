@@ -75,15 +75,15 @@ public class Mario extends Actor
     
     public boolean onGround(){
         Actor brightConstruction;
-        brightConstruction = this.getOneObjectAtOffset(0, 77, BrightConstruction.class);
+        brightConstruction = this.getOneObjectAtOffset(0, 77, BrightConstruction.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
         Actor darkConstruction;
-        darkConstruction = this.getOneObjectAtOffset(0, 77, DarkConstruction.class);
+        darkConstruction = this.getOneObjectAtOffset(0, 77, DarkConstruction.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
         Actor tube;
-        tube = this.getOneObjectAtOffset(0, 90, Tube.class);
+        tube = this.getOneObjectAtOffset(0, 90, Tube.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
-        if(brightConstruction != null || darkConstruction != null || tube != null){
+        if(brightConstruction != null || darkConstruction != null || tube != null){ //Abfrage ob einer der Objekte überschneidet und danach gibt es ein return
             return true;
         
         
@@ -100,9 +100,9 @@ public class Mario extends Actor
             gravitySpeed = 0; 
             
             Actor plat;
-            plat = this.getOneIntersectingObject(Ground.class);
+            plat = this.getOneIntersectingObject(Ground.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
             
-            if(plat != null){
+            if(plat != null){ //Abfrage ob das Objekt überschneidet und danach gibt es ein return
                 this.setLocation(this.getX(), plat.getY()-75); //Bekomme die X Achse und Y Achse und subtrahiere von der Y Achse 75
                 
             
@@ -117,7 +117,7 @@ public class Mario extends Actor
     
     public void coinAction(){
         if(isTouching(Coin.class)){ //Wenn Mario einen Coin berührt
-            Actor coin = getOneIntersectingObject(Coin.class); 
+            Actor coin = getOneIntersectingObject(Coin.class);  //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
             getWorld().removeObject(coin); //Lösche das Objekt Coin
             Mario.coinCounter++; //Füge 1 zu der Variable coinCounter hinzu
         
@@ -134,9 +134,9 @@ public class Mario extends Actor
     
     public boolean sinkInCheck(){
         Actor tube;
-        tube = this.getOneObjectAtOffset(0, 90, Tube.class);
+        tube = this.getOneObjectAtOffset(0, 90, Tube.class);  //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
-        if(tube != null){
+        if(tube != null){ //Abfrage ob das Objekt überschneidet und danach gibt es ein return
             return true;    
         
         
@@ -188,26 +188,26 @@ public class Mario extends Actor
     }
     
     public void ratingSystem(){
-        if(coinCounter == 5){
-            ratingCalc = "3";
+        if(coinCounter == 5){ //Kontrolliere ob Wert gleich 5 ist
+            ratingCalc = "3"; //Wenn Abfrage stimmt bekomme 3 Sterne beim End Screen
             
         
         }
         
-        if(coinCounter == 4 || coinCounter == 3){
-            ratingCalc = "2";
+        if(coinCounter == 4 || coinCounter == 3){ //Kontrolliere ob Wert gleich 4 oder 3 ist
+            ratingCalc = "2"; //Wenn Abfrage stimmt bekomme 2 Sterne beim End Screen
             
         
         }
         
-        if(coinCounter == 2 || coinCounter == 1){
-            ratingCalc = "1";
+        if(coinCounter == 2 || coinCounter == 1){ //Kontrolliere ob Wert gleich 2 oder 1 ist
+            ratingCalc = "1"; //Wenn Abfrage stimmt bekomme 1 Sterne beim End Screen
             
         
         }
         
-        if(coinCounter == 0){
-            ratingCalc = "0";
+        if(coinCounter == 0){ //Kontrolliere ob Wert gleich 0 ist
+            ratingCalc = "0"; //Wenn Abfrage stimmt bekomme 0 Sterne beim End Screen
             
         
         }

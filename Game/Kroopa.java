@@ -53,15 +53,15 @@ public class Kroopa extends Actor
     
     public boolean onGround(){
         Actor brightConstruction;
-        brightConstruction = this.getOneObjectAtOffset(0, 77, BrightConstruction.class);
+        brightConstruction = this.getOneObjectAtOffset(0, 77, BrightConstruction.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
         Actor darkConstruction;
-        darkConstruction = this.getOneObjectAtOffset(0, 77, DarkConstruction.class);
+        darkConstruction = this.getOneObjectAtOffset(0, 77, DarkConstruction.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
         Actor tube;
-        tube = this.getOneObjectAtOffset(0, 90, Tube.class);
+        tube = this.getOneObjectAtOffset(0, 90, Tube.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
         
-        if(brightConstruction != null || darkConstruction != null || tube != null){
+        if(brightConstruction != null || darkConstruction != null || tube != null){ //Abfrage ob einer der Objekte überschneidet und danach gibt es ein return
             return true;
         
         
@@ -78,7 +78,7 @@ public class Kroopa extends Actor
             gravitySpeed = 0; //Setze dem gravitySpeed auf 0
             
             Actor plat;
-            plat = this.getOneIntersectingObject(Ground.class);
+            plat = this.getOneIntersectingObject(Ground.class); //Gibt alle Objekte zurück, mit denen sich das Objekt überschneidet.
             
             if(plat != null){
                 this.setLocation(this.getX(), plat.getY()-35); //Bekomme die X Achse und Y Achse und subtrahiere von der Y Achse 75

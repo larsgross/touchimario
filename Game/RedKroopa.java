@@ -13,6 +13,7 @@ public class RedKroopa extends Actor
     
     //Definierung der Variablen mit Datentypen
     private int decideAnimation = 0;
+    private int gravitySpeed;
 
     public void act()
     {
@@ -23,7 +24,7 @@ public class RedKroopa extends Actor
     private void walk(){
       if(this.getX() == 965){ //Wenn der Aktor RedKroopa bei der Koordinate 965 bei der X Achse ist
           decideAnimation++;  //Variabel aufzählen
-            
+          jumpAction();  
         
       }
       
@@ -45,4 +46,19 @@ public class RedKroopa extends Actor
         
     
     }
+    
+    private void jumpAction(){
+        gravitySpeed = -10; //Setzen der Sprunghöhe
+        this.gravitySystem(); //Auf Aktor Mario die Methode gravitySpeed nutzen
+    
+    }
+    
+    private void gravitySystem(){
+        this.setLocation(this.getX() + 2, this.getY() + gravitySpeed); //Speichere die Koordinaten X und Y und zähle bei der Koordinate Y + die Variable gravitySpeed dazu
+        gravitySpeed++; //Zähle zu der Variable 1 dazu.
+    
+    
+    }
+    
+
 }
