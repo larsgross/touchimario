@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cloud here.
+ * Object Clouds
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Lars Gross, Vithun Kandeepan) 
+ * @version (1.0.1)
  */
 public class Cloud extends Actor
 {

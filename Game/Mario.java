@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Mario here.
+ * Object Mario
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1) 
@@ -61,8 +61,8 @@ public class Mario extends Actor
     }
     
     private void jumpAction(){
-        gravitySpeed = -23; 
-        this.gravitySystem();
+        gravitySpeed = -23; //Setzen der Sprunghöhe
+        this.gravitySystem(); //Auf Aktor Mario die Methode gravitySpeed nutzen
     
     }
     
@@ -127,7 +127,7 @@ public class Mario extends Actor
     }
     
     public void enemyAction(){
-        if(isTouching(Kroopa.class)){ //Abfrage wenn es Kroopa berührt
+        if(isTouching(Kroopa.class) || isTouching(PurpleKroopa.class) || isTouching(RedKroopa.class)){ //Abfrage wenn es Kroopa berührt
             Greenfoot.setWorld(new Over()); //Öffne die neue Welt    
         }
     }
@@ -150,9 +150,9 @@ public class Mario extends Actor
     }
     
     public void sinkIn(){
-        if(sinkInCheck() == true){
-            this.setLocation(this.getX(), this.getY()-95);    
-            Greenfoot.setWorld(new Level3());        
+        if(sinkInCheck() == true){ //Wenn der retunr true ist von der Methode sinkInCheck
+            this.setLocation(this.getX(), this.getY()-95); //Location setzen von dem Aktor Mario   
+            Greenfoot.setWorld(new Level3()); //In Welt 3 den Aktor Mario setzen        
         
         }
     

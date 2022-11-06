@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level1 here.
+ * Starting Game in World Level1.
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)
@@ -65,9 +65,11 @@ public class Level1 extends World
     
     private void spawnbrightConstruction(){
         num = 3; //Wieviel mal soll das Objekt gesetzt werden
+        
         //Bei welchen Koordinaten fängt es an
         cordY = 535;
         cordX = 451;
+        
         checkObjects = getObjects(BrightConstruction.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
         while(checkObjects < num){ //Abfrage wenn es weniger sind als in num
@@ -98,8 +100,8 @@ public class Level1 extends World
     }
     
     private void spawnEnemy(){
-        Kroopa kroopa = new Kroopa();
-        addObject(kroopa, 789, 666);
+        Kroopa kroopa = new Kroopa(); //Neues Objekt wird erzeugt
+        addObject(kroopa, 789, 666); //Objekt wird platziert
     
     
     }

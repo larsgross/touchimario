@@ -1,19 +1,48 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RedKroopa here.
+ * Object RedKroopa
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Lars Gross, Vithun Kandeepan) 
+ * @version (1.0.1)
  */
 public class RedKroopa extends Actor
 {
-    /**
-     * Act - do whatever the RedKroopa wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GifImage leftKroopaAnimation = new GifImage("left_kroopa.gif"); //Speichern des Gifs in einer Variabel
+    GifImage rightKroopaAnimation = new GifImage("right_kroopa.gif"); //Speichern des Gifs in einer Variabel
+    
+    //Definierung der Variablen mit Datentypen
+    private int decideAnimation = 0;
+
     public void act()
     {
-        // Add your action code here.
+        // Abruf der Methoden
+        walk();
+    }
+    
+    private void walk(){
+      if(this.getX() == 965){ //Wenn der Aktor RedKroopa bei der Koordinate 965 bei der X Achse ist
+          decideAnimation++;  //Variabel aufzählen
+            
+        
+      }
+      
+      if(this.getX() == 1114){ //Wenn der Aktor RedKroopa bei der Koordinate 1114 bei der X Achse ist
+          decideAnimation--; //Variabel nach unten zählen
+          
+        
+      }
+      
+      if(decideAnimation == 1){
+        setImage(rightKroopaAnimation.getCurrentImage()); //Setze das Gif
+        move(1);
+        
+      }else{
+        setImage(leftKroopaAnimation.getCurrentImage()); //Setze das Gif
+        move(-1);  
+        
+      }
+        
+    
     }
 }

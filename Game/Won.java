@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Won here.
+ * Display at End of the Game.
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)

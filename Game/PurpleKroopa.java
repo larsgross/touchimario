@@ -1,19 +1,35 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PurpleKroopa here.
+ * Object PurpleKroopa
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Lars Gross, Vithun Kandeepan) 
+ * @version (1.0.1)
  */
 public class PurpleKroopa extends Actor
 {
-    /**
-     * Act - do whatever the PurpleKroopa wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act()
     {
-        // Add your action code here.
+        // Abruf der Methoden
+        walk();
+        atEnd();
     }
+    
+    private void walk(){
+            move(-3); //Objekt läuft nach Links
+    
+            
+    }
+    
+    private void atEnd(){
+        if(isAtEdge()){ //Wenn das Objekt den rand von der Welt berührt.
+            getWorld().removeObject(this); //Dieses Objekt entfernen
+        
+        
+        }
+    
+    
+    }
+    
 }

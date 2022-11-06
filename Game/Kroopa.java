@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class kroopa here.
+ * Object Kroopa
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)
@@ -12,12 +12,14 @@ public class Kroopa extends Actor
     
     //Definierung der Variablen mit Datentypen
     private int gravitySpeed;
+    
     public void act()
     {
         //Abruf der Methode
         kroopaAnimation();
         checkGravity();
         walk();
+        atEnd();
     }
     
     private void kroopaAnimation(){
@@ -26,25 +28,15 @@ public class Kroopa extends Actor
     
     }
     
-    public void walk(){
-        String worlds = getWorld().getClass().getName(); //Bekomme den Namen der aktuellen Welt
-        if (worlds == "Level1" || worlds == "Level2"){
-            move(-1);
-        
-        }
-        
-        if(worlds == "Level3"){
-            if(isTouching(Ground.class)){
-                move(-1);
+    private void walk(){
+            move(-1); //Nach Links bewegen
+    
             
-            
-            }
-            
-            if(isTouching(Ground.class)){
-                move(-1);
-                
-            
-            }
+    }
+    
+    private void atEnd(){
+        if(isAtEdge()){ //Wenn das Objekt den rand von der Welt berührt.
+            getWorld().removeObject(this); //Dieses Objekt entfernen
         
         
         }
@@ -83,7 +75,7 @@ public class Kroopa extends Actor
     
     public void checkGravity(){
         if(this.onGround() == true || this.getY() > 622){ //Abfrage wenn die Methode onGround() stimmt oder die Koordinaten von Mario grösser als 622 sind
-            gravitySpeed = 0; 
+            gravitySpeed = 0; //Setze dem gravitySpeed auf 0
             
             Actor plat;
             plat = this.getOneIntersectingObject(Ground.class);

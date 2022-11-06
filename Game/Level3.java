@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level3 here.
+ * After success in Level2, starting in Level3
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)
@@ -38,9 +38,11 @@ public class Level3 extends World
     
     private void spawnGround(){
     num = 7; //Wieviel mal soll das Objekt gesetzt werden
+    
     //Bei welchen Koordinaten fängt es an
     cordY = 704;
     cordX = 96;
+    
     checkObjects = getObjects(Ground.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
     while(checkObjects < num){ //Abfrage wenn es weniger sind als in num
@@ -68,9 +70,11 @@ public class Level3 extends World
     addObject(darkConstruction3, 798, 463); //Objekt platzieren
         
     num = 6; //Wieviel mal soll das Objekt gesetzt werden
+    
     //Bei welchen Koordinaten fängt es an
     cordY = 359;
     cordX = 981;
+    
     checkObjects = getObjects(DarkConstruction.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
     while(checkObjects < num){ //Abfrage wenn es weniger sind als in num
@@ -109,8 +113,10 @@ public class Level3 extends World
     private void spawnEnemy(){
         RedKroopa redkroopa = new RedKroopa(); //Neues Objekt erzeugen
         addObject(redkroopa, 965, 292); //Objekt platzieren
-        Kroopa kroopa2 = new Kroopa(); //Neues Objekt erzeugen
-        addObject(kroopa2, 268, 669); //Objekt platzieren
+        Kroopa kroopa = new Kroopa(); //Neues Objekt erzeugen
+        addObject(kroopa, 268, 669); //Objekt platzieren
+        PurpleKroopa purplekroopa = new PurpleKroopa(); //Neues Objekt erzeugen
+        addObject(purplekroopa, 1104, 654); //Objekt platzieren
         
     
     }

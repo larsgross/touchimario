@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Level2 here.
+ * After success in Level1, starting in Level2
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)
@@ -39,9 +39,11 @@ public class Level2 extends World
     
     private void spawnGround(){
     num = 7; //Wieviel mal soll das Objekt gesetzt werden
+    
     //Bei welchen Koordinaten fängt es an
     cordY = 704;
     cordX = 96;
+    
     checkObjects = getObjects(Ground.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
     while(checkObjects < num){ //Abfrage wenn es weniger sind als in num
@@ -59,9 +61,11 @@ public class Level2 extends World
     
     private void spawndarkConstruction(){
     num = 2; //Wieviel mal soll das Objekt gesetzt werden
+    
     //Bei welchen Koordinaten fängt es an
     cordY = 547;
     cordX = 385;
+    
     checkObjects = getObjects(DarkConstruction.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
     while(checkObjects < num){ //Abfrage wenn es weniger sind als in num
@@ -79,9 +83,11 @@ public class Level2 extends World
     
     private void spawndarkConstruction2(){
     num = 8; //Wieviel mal soll das Objekt gesetzt werden
+    
     //Bei welchen Koordinaten fängt es an
     cordY = 467;
     cordX = 634;
+    
     checkObjects = getObjects(DarkConstruction.class).size(); //Wieviele von der Klasse Ground sind in der Welt
         
     while(checkObjects < num){ //Abfrage wenn es weniger sind als in num

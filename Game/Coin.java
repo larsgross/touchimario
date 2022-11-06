@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Coin here.
+ * Object Coi
  * 
  * @author (Lars Gross, Vithun Kandeepan) 
  * @version (1.0.1)
