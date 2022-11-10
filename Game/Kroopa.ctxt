@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Kroopa
+comment0.text=\r\n\ Object\ Kroopa\r\n\ \r\n\ @author\ (Lars\ Gross,\ Vithun\ Kandeepan)\ \r\n\ @version\ (1.0.1)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ kroopaAnimation()
+comment3.params=
+comment3.target=void\ walk()
+comment4.params=
+comment4.target=void\ atEnd()
+comment5.params=
+comment5.target=void\ gravitySystem()
+comment6.params=
+comment6.target=boolean\ onGround()
+comment7.params=
+comment7.target=void\ checkGravity()
+numComments=8
